@@ -1,0 +1,31 @@
+nav.breadcrumb {
+    margin: 0;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0;
+}
+
+.bred-label {
+    font-size: 12px;
+}
+
+.active {
+    text-decoration: underline;
+    color: #0037a5;
+}
+
+.none-active {
+    text-decoration: none;
+    color: black;
+    opacity: .8;
+}
+
+.none-active:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+.navbar-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 .9rem;
+}
+
+.searchbar {
+    background-color: rgba(222, 222, 222, 0.3);
+    padding: .3rem 1rem;
+    border-radius: .2rem;
+    display: flex;
+    align-items: center;
+}
+
+input.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.logout-btn {
+    font-size: 12px !important;
+    padding: 0;
+    
+}
+
+button#basic-button {
+    background-color: transparent !important;
+    outline: none;
+    border: none;
+    color: #66615B;
+}
+
+button#basic-button:hover {
+   background-color: transparent !important;
+   color: #51cbce;
+}
