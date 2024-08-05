@@ -1,17 +1,14 @@
 import React from 'react';
-import { Box, Drawer, List, ListItemIcon, ListItemText, CssBaseline, Toolbar, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Box, CssBaseline, Toolbar, Typography, } from '@mui/material';
+
 import Card from './Card';
-import dashboard_icon from '../assets/dashboard_icon.png';
-import submission_icon from '../assets/submission_icon.png';
-import research_icon from '../assets/research_icon.png';
-import bookmark_icon from '../assets/bookmark_icon.png';
-import download_icon from '../assets/download_icon.png';
+
 import publications_icon from '../assets/publications_icon.png';
 import check_icon from '../assets/check_icon.png';
 import i_icon from '../assets/i_icon.png'
+import Sidebar from './Sidebar/Sidebar';
 
-const drawerWidth = 240;
+
 
 const Dashboard = () => {
   const mockData = [
@@ -21,20 +18,11 @@ const Dashboard = () => {
   ];
 
 
-  const menuData = [
-    { title: 'Dashboard', icon: dashboard_icon },
-    { title: 'Submission', icon: submission_icon, options: ['Intellectual Property','Project Submission']},
-    { title: 'Research Portfolio', icon: research_icon, options: ['Personal Information', 'Honor And Awards, Scholarship', 'Membership', 'View All Publications', 'Add New Publications', 'Research Grants And Contracts'] },
-    { title: 'Departmental Research Data', icon: bookmark_icon },
-    { title: 'Downloadable', icon: download_icon },
-    { title: 'Users & Roles', icon: download_icon, options: ['View All Users', 'Add New User'] },
-  ];
-
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <Drawer
+      {/* <Drawer
         variant="permanent"
         sx={{
           width: drawerWidth,
@@ -71,7 +59,8 @@ const Dashboard = () => {
             ))}
           </List>
         </Box>
-      </Drawer>
+      </Drawer> */}
+      <Sidebar/>
       <Box
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
