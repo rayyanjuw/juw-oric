@@ -3,7 +3,8 @@ import cors from "cors"
 import { connectDB } from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import 'dotenv/config'
-import researchRouter from './routes/researchRoutes/index.js';
+import authenticate from './middleware/auth.js';
+import authRouter from './routes/authRouters.js'
 // const User = require('./models/User');
 // const Research = require('./models/Research');
 
@@ -19,10 +20,12 @@ app.use(cors()) // can access the backend from any frontend
 // db connection
 connectDB();
 
+// app.use(authenticate);
 
 // api Endpoints :
 app.use("/api/user", userRouter)
-app.use("/api/research", researchRouter)
+app.use('/api/auth', authRouter)
+// app.use("/api/research", researchRouter)
 
 // get method is the http method we can request the data from server
 app.get("/", (req, res)=>{
@@ -37,6 +40,7 @@ app.listen(port, ()=>{
 // import express from 'express';
 // import cors from 'cors';
 // import connectToMongo from './db';
+
 
 
 
