@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
 import SignInSide from './components/SignInSide';
-import Dashboard from './components/Dashboard'
+import ViewAllPublications from './components/ViewAllPublications/ViewAllPublications';
 import {Routes, Route, Router} from 'react-router-dom';
 import DepartmentalResearch from './components/DepartmentalResearch/DepartmentalResearch';
 import Downloadable from './components/Downloadable';
-// import UserAndGroups from './components/Settings/UserAndGroup';
-import UserManagement from './components/Settings/UserManagement';
 import ResearchPublication from './components/researchPublication/ResearchPublication';
+import Dashboard from './components/Dashboard/Dashboard';
+import UserManagement from './components/Usermanagement/Usermanagement';
 
 function App() {
   
@@ -22,9 +22,8 @@ function App() {
       <Route path="/downloadable" element={<Downloadable/>}/>
       <Route path="/usermanagement" element={<UserManagement/>}/>
       <Route path="/researchpublication" element={<ResearchPublication/>}/>
+      <Route path='/viewallpublications' element={<ViewAllPublications/>}/>
     </Routes>
-      {/* <SignInSide/> */}
-      {/* <Dashboard/> */}
     </div>
     </>
   );

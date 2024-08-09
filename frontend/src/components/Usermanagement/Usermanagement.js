@@ -9,7 +9,7 @@ const UserManagement = () => {
     name: "",
     email: "",
     password: "",
-    role: "",
+    role: "", 
     department: "",
   });
 
@@ -103,26 +103,25 @@ const UserManagement = () => {
 
 
   const users = [
-    { name: 'Alice Johnson', email: 'alice.johnson@example.com', role: 'Administrator', faculty: 'Faculty of Science', department: 'Department of Physics' },
-    { name: 'Bob Smith', email: 'bob.smith@example.com', role: 'Researcher', faculty: 'Faculty of Pharmacy', department: 'Department of Pharmacology' },
-    { name: 'Charlie Brown', email: 'charlie.brown@example.com', role: 'Faculty Member', faculty: 'Faculty of Social Sciences', department: 'Department of Sociology' },
-    { name: 'Diane Harris', email: 'diane.harris@example.com', role: 'Researcher', faculty: 'Faculty of Business Administration', department: 'Department of Marketing' },
-    { name: 'Eve Davis', email: 'eve.davis@example.com', role: 'Administrator', faculty: 'Faculty of Allied Medical Sciences', department: 'Department of Nursing' },
-    { name: 'Frank Miller', email: 'frank.miller@example.com', role: 'Faculty Member', faculty: 'Faculty of Science', department: 'Department of Chemistry' },
-    { name: 'Grace Lee', email: 'grace.lee@example.com', role: 'Researcher', faculty: 'Faculty of Pharmacy', department: 'Department of Clinical Pharmacy' },
-    { name: 'Henry Wilson', email: 'henry.wilson@example.com', role: 'Administrator', faculty: 'Faculty of Social Sciences', department: 'Department of Psychology' },
+    { name: 'Administrator', username: "admin", email: 'oricadmin@juw.edu.pk', role: 'Admin', faculty: 'Faculty of Science', department: 'IT' },
+    { name: 'Manager ORIC', username: "manager", email: 'oricmanager@juw.edu.pk', role: 'Manager', faculty: 'Faculty of Pharmacy', department: 'ORIC' },
+    { name: 'Researcher ORIC', username: "researcher", email: 'oricresearcher@juw.edu.pk', role: 'Researcher', faculty: 'Faculty of Social Sciences', department: 'ORIC' },
+    { name: 'Muhammad Yasir', username: "yasir", email: 'yasir@juw.edu.pk', role: 'Researcher', faculty: 'Faculty of Business Administration', department: 'IT' },
+    { name: 'Syed Abu Fahar', username: "fahar", email: 'fahar@juw.edu.pk', role: 'Admin', faculty: 'Faculty of Allied Medical Sciences', department: 'IT' },
+    { name: 'Syed Abu Fahar', username: "safahar", email: 'sa.fahar@outlook.com', role: 'Manager', faculty: 'Faculty of Science', department: 'IT' },
   ];
+
 
   return (
     <>
     <div className="whole-page-container">
       <Sidebar />
       <div className="user-management">
-        I am inside usermanagement
-        {/* <UserAndGroup/> */}
-        <button type="button" onClick={openModal}>
-          Create User
-        </button>
+        <div className="user-management-card">
+          <h4>Users and Roles</h4>
+          <button type="button" className="create-user-btn" onClick={openModal}>
+            ADD NEW USER
+          </button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -214,33 +213,37 @@ const UserManagement = () => {
             <button className="submit-button" type="submit">Submit</button>
           </form>
         </Modal>
-      </div>
-      
-    </div>
-          <div className="table-container">
-          <table className="user-management-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Faculty</th>
-                <th>Department</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user, index) => (
-                <tr key={index}>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.role}</td>
-                  <td>{user.faculty}</td>
-                  <td>{user.department}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <button>SEARCH</button>
+        <h5>Current Users</h5>
+        <div className="usermanagement-table-container">
+          <div className='list add flex-col'>
+            <div className="list-table">
+              <div className="list-table-format title">
+                <b>Name</b>
+                <b>Username</b>
+                <b>User Role</b>
+                <b>Department</b>
+                <b>Email</b>
+                <b>Actions</b>
+              </div>
+              {users.map((user, index)=>{
+                return (
+                  <div key={index} className='list-table-format'>
+                    <p>{user.name}</p>
+                    <p>{user.username}</p>
+                    <p>{user.role}</p>
+                    <p>{user.department}</p>
+                    <p>{user.email}</p>
+                    <button>Edit</button>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
+        </div>
+      </div>
+    </div>
       </>
   );
 };

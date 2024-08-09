@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .whole-page-container {
     display: flex;
     height: 100vh;
 }
 
 .sidebar {
-    width: 25%;
+    width: 20%;
     background: #0037a5;
     position: sticky;
     top: 0;
@@ -53,8 +55,7 @@
 .whole-page-container {
     display: flex;
   }
-  
-  /* Main container for user management */
+
   .user-management {
     flex: 1;
     padding: 20px;
@@ -98,11 +99,8 @@
     justify-content: center;
   }
   
-  /* Form styling */
   .create-user {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     flex-direction: column;
   }
   
@@ -138,67 +136,116 @@
   }
   
   .create-user button {
-    /* background-color: #28a745; */
     background: #51cbce;
     color: white;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 120px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
   }
   
+
+  .create-user-btn {
+    margin: 10px 7px;
+  }
+
   .create-user button:hover {
     background-color: #218838;
   }
   
  .submit-button {
     color: #51cbce;
-    /* background: #51cbce; */
     background: red;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-/* table section */
 
-.table-container {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
 
-.user-management-table {
+  .user-management-card {
+    background-color: white;
+    margin-top: 60px;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .user-management-card h4{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+
+  .user-management-card button {
+    font-weight: bold;
+  }
+
+
+  .user-management-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+  }
+  
+  .user-management-table thead tr {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+
+.list-table-format {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* padding: 12px 15px; */
+  padding: 5px 7px;
+  background-color: white;
+  border-top: 1px solid #cacaca;
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+  height: 50px;
+  font-size: 13px;
 }
 
-.user-management-table th,
-.user-management-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+.list-table-format.title {
+  background-color: white;
+  padding: 20px 40px;
 }
 
-.user-management-table th {
-  /* background-color: #f2f2f2; */
-  background-color: #f4f3ef;
-  font-weight: bold;
+.list-table-format.title b {
+  flex: 1;
+  margin: 0;
 }
 
-.user-management-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+.list-table-format p {
+  flex: 1;
+  margin: 0;
 }
 
-.user-management-table tr:hover {
-  background-color: #f1f1f1;
+.list-table-format button {
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  height: 30px;
+  color: white;
+  font-size: 0.8571em;
+  padding: 5px 7px;
+  color: white;
+  /* background-color: #007bff;  */
+  border: none; 
+  cursor: pointer;
 }
 
+.list-table-format.title p {
+  flex: 1;
+  text-align: center;
+}
 
 
 
