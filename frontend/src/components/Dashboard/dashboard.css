@@ -1,0 +1,101 @@
+
+.dashboard-whole-page {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background: #0037a5;
+    position: sticky;
+    color: #FFFFFF;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.dashboard {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #F4F3EF;
+    padding: 20px;
+}
+
+.dashboard-card {
+    width: 100%;
+    margin-top: 20px;
+    height: 580px;
+    background-color: white !important;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.dashboard-portfolio {
+    padding: 1.5rem 1rem .7rem 1rem;
+    font-size: 22px;
+}
+
+.dashboard-subcards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.dashboard-subcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem 1rem .7rem 1rem;
+    font-size: 22px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.subcard-title h5 {
+    color: #9A9A9A;
+    font-size: 16px;
+}
+
+.subcard-number h4 {
+    font-size: 24px;
+    color: #333;
+}
+
+.subcard-img img {
+    min-height: auto;
+    width: 30px;
+    height: 30px;
+}
+
+.subcard-link a {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #51cbce;
+}
+
+.subcard-link hr {
+    width: 250px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+
+
+
+

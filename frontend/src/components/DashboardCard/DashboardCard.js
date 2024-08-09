@@ -46,7 +46,7 @@ const DashboardCard = () => {
     console.log(userInfos)
 
     return (
-        <div className='dashboard-card'>
+        <div className='dashboard-card1'>
             <div className="card-content">
                 <h3>Departmental Research Data | Publications of Faculty</h3>
                 <p>Publications of Faculty:</p>
@@ -76,87 +76,4 @@ const DashboardCard = () => {
 };
 
 export default DashboardCard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// latest working code 
-// import React, { useState } from 'react';
-// import './DashboardCard.css';
-
-// const DashboardCard = () => {
-//     const createInitialState = () => ({
-//         title: "",
-//         webOfScience: "",
-//         impactFactor: "",
-//         scopus: "",
-//         hec: "",
-//         otherIndexing: "",
-//         firstAuthor: "",
-//         secondAuthor: "",
-//     });
-
-//     const [userInfo1, setUserInfo1] = useState(createInitialState());
-//     const [userInfo2, setUserInfo2] = useState(createInitialState());
-//     const [userInfo3, setUserInfo3] = useState(createInitialState());
-//     const [userInfo4, setUserInfo4] = useState(createInitialState());
-//     const [userInfo5, setUserInfo5] = useState(createInitialState());
-
-//     const handleInput = (e, setUserInfo) => {
-//         setUserInfo(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
-//     };
-
-//     const userInfos = [
-//         { state: userInfo1, setState: setUserInfo1 },
-//         { state: userInfo2, setState: setUserInfo2 },
-//         { state: userInfo3, setState: setUserInfo3 },
-//         { state: userInfo4, setState: setUserInfo4 },
-//         { state: userInfo5, setState: setUserInfo5 },
-//     ];
-
-//     return (
-//         <div className='dashboard-card'>
-//             <div className="card-content">
-//                 <h3>Departmental Research Data | Publications of Faculty</h3>
-//                 <p>Publications of Faculty:</p>
-//             </div>
-//             <div className="card-items">
-//                 {userInfos.map(({ state, setState }, index) => (
-//                     <div className="card-item" key={index}>
-//                         <div className="card-title">
-//                             <h4>Publication Details {index + 1}.</h4>
-//                         </div>
-//                         {Object.keys(state).slice(0, 4).map((key, i) => (
-//                             <div key={i} className="input-group">
-//                                 {/* <label>{key}</label> */}
-//                                 <label>{key}</label>
-//                                 <input type='text' value={state[key]} name={key} onChange={(e) => handleInput(e, setState)} />
-//                             </div>
-//                         ))}
-//                         {Object.keys(state).slice(4).map((key, i) => (
-//                             <div key={i} className="input-group">
-//                                 <label>{key}</label>
-//                                 <input type='text' value={state[key]} name={key} onChange={(e) => handleInput(e, setState)} />
-//                             </div>
-//                         ))}
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default DashboardCard;
 
