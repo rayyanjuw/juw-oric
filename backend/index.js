@@ -5,8 +5,7 @@ import userRouter from "./routes/userRoute.js"
 import 'dotenv/config'
 import authenticate from './middleware/auth.js';
 import authRouter from './routes/authRouters.js'
-// const User = require('./models/User');
-// const Research = require('./models/Research');
+
 
 // app config
 const app = express()
@@ -36,34 +35,3 @@ app.listen(port, ()=>{
     console.log(`Server Started At http://localhost:${port}`)
 })
 
-
-// import express from 'express';
-// import cors from 'cors';
-// import connectToMongo from './db';
-
-
-
-
-// connectToMongo();
-// const app = express()
-// const port = 5000
-
-// app.use(cors())
-
-
-// // Middleware
-// app.use(express.json())
-
-
-// // Available Routes
-// // app.use('/api/auth', require('./routes/auth'));
-// app.use()
-
-// // app.get('/', (req, res) => {
-// //   res.send('Hello Tajamul!')
-// // })
-
-
-// app.listen(port, () => {
-//   console.log(`ORIC Backend listening on port ${port}`)
-// })
