@@ -3,8 +3,10 @@ import cors from "cors"
 import { connectDB } from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import 'dotenv/config'
-import authenticate from './middleware/auth.js';
+// import authenticate from './middleware/auth.js';
 import authRouter from './routes/authRouters.js'
+import publicationRoutes from './routes/publicationsRoutes.js';
+
 // const User = require('./models/User');
 // const Research = require('./models/Research');
 
@@ -25,6 +27,8 @@ connectDB();
 // api Endpoints :
 app.use("/api/user", userRouter)
 app.use('/api/auth', authRouter)
+// Use routes
+app.use('/api/publications', publicationRoutes);
 // app.use("/api/research", researchRouter)
 
 // get method is the http method we can request the data from server
