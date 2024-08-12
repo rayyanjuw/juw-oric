@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { jsPDF } from "jspdf";
 import * as XLSX from 'xlsx';
 import 'jspdf-autotable';
+import NavBar from "../shared-components/navbar/NavBar";
 
 
 const downloadPDF = (data) => {
@@ -254,9 +255,13 @@ const ViewAllPublications = () => {
   ];
 
   return (
+    <>
     <div className="viewallpublications-whole-page">
       <Sidebar />
       <div className="viewAllPublications">
+      <div className='navbar-div'>
+        <NavBar/>
+        </div>
         <div className="viewAllPublications-card">
           <h4>Research portfolio | Publications</h4>
           <div className="bred-crumb">
@@ -303,6 +308,7 @@ const ViewAllPublications = () => {
           </div>
       </div>
     </div>
+    </>
   );
 };
 

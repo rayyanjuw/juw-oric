@@ -5,10 +5,12 @@ import './DepartmentalResearch.css';
 
 const DepartmentalResearch = () => {
     return (
+        <>
         <div className="departmental-research-container">
             <Sidebar />
             <DashboardCard />
         </div>
+        </>
     );
 };
 

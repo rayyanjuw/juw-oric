@@ -1,15 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import "./dashboard.css";
 import Sidebar from "../Sidebar/Sidebar";
 import publications_icon from "../../assets/publications_icon.png";
 import i_icon from '../../assets/i_icon.png';
 import check_icon from '../../assets/check_icon.png';
+import NavBar from "../shared-components/navbar/NavBar";
 
 const Dashboard = () => {
+
   return (
+    <>
     <div className="dashboard-whole-page">
       <Sidebar />
       <div className="dashboard">
+      <div className='navbar-div'>
+        <NavBar/>
+        </div>
         <div className="dashboard-card">
           <h3 className="dashboard-portfolio">
             Welcome to the member's area, admin!
@@ -67,6 +73,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 

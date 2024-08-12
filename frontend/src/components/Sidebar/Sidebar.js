@@ -1,3 +1,4 @@
+// code perfectly working
 import React from "react";
 import logo1 from "../../assets/logo1.png";
 import "./sidebar.css";
@@ -10,13 +11,18 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import { GiGreekTemple } from "react-icons/gi";
+// import { TiDocumentText } from "react-icons/ti";
+// import { IoBriefcaseOutline } from "react-icons/io5";
+// import { FaRegBookmark } from "react-icons/fa6";
+// import { IoCloudDownloadOutline } from "react-icons/io5";
+// import { BsLayoutTextSidebar } from "react-icons/bs";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 import { GiGreekTemple } from "react-icons/gi";
 import { TiDocumentText } from "react-icons/ti";
-import { IoBriefcaseOutline } from "react-icons/io5";
+import { IoBriefcaseOutline, IoCloudDownloadOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
-import { IoCloudDownloadOutline } from "react-icons/io5";
 import { BsLayoutTextSidebar } from "react-icons/bs";
 
 const drawerWidth = 240;
@@ -31,7 +37,7 @@ const Sidebar = () => {
   const sideBarData = [
     {
       icon: <GiGreekTemple />,
-      name: "Dasboard",
+      name: "Dashboard",
       path: "/dashboard",
     },
     {
@@ -43,7 +49,6 @@ const Sidebar = () => {
           subitem: "Intellectual Property",
           subpath: "/",
         },
-
         {
           subitem: "Project Submission",
           subpath: "/",
@@ -59,7 +64,6 @@ const Sidebar = () => {
           subitem: "Personal Information",
           subpath: "/",
         },
-
         {
           subitem: "Honor And Awards, Scholarship",
           subpath: "/",
@@ -70,7 +74,7 @@ const Sidebar = () => {
         },
         {
           subitem: "View All Publications",
-          subpath: "/",
+          subpath: "/viewallpublications",
         },
         {
           subitem: "Research Grants And Contracts",
@@ -81,12 +85,12 @@ const Sidebar = () => {
     {
       icon: <FaRegBookmark />,
       name: "Department Research Data",
-      path: "/",
+      path: "/departmental-research-data-publications-of-faculty",
     },
     {
       icon: <IoCloudDownloadOutline />,
       name: "Downloadable",
-      path: "/",
+      path: "/downloadable",
     },
     {
       icon: <BsLayoutTextSidebar />,
@@ -95,15 +99,92 @@ const Sidebar = () => {
       options: [
         {
           subitem: "View All Users",
-          subpath: "/",
+          subpath: "/usermanagement",
         },
         {
           subitem: "Add New User",
           subpath: "/usermanagement",
         },
-      ]
+      ],
     },
   ];
+
+  // const sideBarData = [
+  //   {
+  //     icon: <GiGreekTemple />,
+  //     name: "Dasboard",
+  //     path: "/dashboard",
+  //   },
+  //   {
+  //     icon: <TiDocumentText />,
+  //     name: "Submission",
+  //     path: "/",
+  //     options: [
+  //       {
+  //         subitem: "Intellectual Property",
+  //         subpath: "/",
+  //       },
+
+  //       {
+  //         subitem: "Project Submission",
+  //         subpath: "/",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     icon: <IoBriefcaseOutline />,
+  //     name: "Research Portfolio",
+  //     path: "/researchpublication",
+  //     options: [
+  //       {
+  //         subitem: "Personal Information",
+  //         subpath: "/",
+  //       },
+
+  //       {
+  //         subitem: "Honor And Awards, Scholarship",
+  //         subpath: "/",
+  //       },
+  //       {
+  //         subitem: "Membership",
+  //         subpath: "/",
+  //       },
+  //       {
+  //         subitem: "View All Publications",
+  //         subpath: "/viewallpublications",
+  //       },
+  //       {
+  //         subitem: "Research Grants And Contracts",
+  //         subpath: "/",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     icon: <FaRegBookmark />,
+  //     name: "Department Research Data",
+  //     path: "/departmental-research-data-publications-of-faculty",
+  //   },
+  //   {
+  //     icon: <IoCloudDownloadOutline />,
+  //     name: "Downloadable",
+  //     path: "/downloadable",
+  //   },
+  //   {
+  //     icon: <BsLayoutTextSidebar />,
+  //     name: "Users & Roles",
+  //     path: "/usermanagement",
+  //     options: [
+  //       {
+  //         subitem: "View All Users",
+  //         subpath: "/usermanagement",
+  //       },
+  //       {
+  //         subitem: "Add New User",
+  //         subpath: "/usermanagement",
+  //       },
+  //     ]
+  //   },
+  // ];
 
   return (
     <>
@@ -115,14 +196,7 @@ const Sidebar = () => {
         <hr />
         <div className="sidebar-options">
           {sideBarData?.map((item, index) => (
-            // <div  key={i} className=''>
 
-            //     <Link className="sidebar-option">
-
-            //     <div style={sidebarOptionStyle} className="icons-sidebar">{items.icon}</div>
-            //     <p className=''>{items.name}</p>
-            // </Link>
-            // </div>
             <div>
               <Accordion
                 key={index}
@@ -175,64 +249,11 @@ const Sidebar = () => {
             </div>
           ))}
         </div>
-        {/* <Drawer
-          variant="permanent"
-          sx={{
-            width: drawerWidth,
-            flexShrink: 0,
-            [`& .MuiDrawer-paper`]: {
-              width: drawerWidth,
-              boxSizing: "border-box",
-            },
-          }}
-          className="!bg-transparent"
-        >
-            
-          <Box sx={{ overflow: "auto" }}>
-            <List sx={{ padding: 0 }}>
-              {sideBarData.map((item, index) => (
-                <Accordion key={index} sx={{ boxShadow: "none", margin: 0 }}>
-                  <AccordionSummary
-                    expandIcon={item.options ? <ExpandMoreIcon /> : null}
-                    aria-controls={`panel${index}-content`}
-                    id={`panel${index}-header`}
-                    sx={{ minHeight: 0, padding: "0 16px" }}
-                  >
-                    <ListItemIcon sx={{ minWidth: "auto", marginRight: "8px" }}>
-                      <img
-                        src={item.icon}
-                        alt=""
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          width: "30px",
-                          height: "30px",
-                        }}
-                      />
-                    </ListItemIcon>
-                    <ListItemText primary={item.title} sx={{ margin: 0 }} />
-                  </AccordionSummary>
-                  {item.options && (
-                    <AccordionDetails sx={{ padding: "0 16px" }}>
-                      {item.options.map((option, idx) => (
-                        <Typography
-                          key={idx}
-                          sx={{ paddingLeft: 4, marginBottom: "8px" }}
-                        >
-                          {option}
-                        </Typography>
-                      ))}
-                    </AccordionDetails>
-                  )}
-                </Accordion>
-              ))}
-            </List>
-          </Box>
-        </Drawer> */}
       </div>
     </>
   );
 };
 
 export default Sidebar;
+
+
