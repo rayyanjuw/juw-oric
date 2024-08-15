@@ -1194,7 +1194,7 @@ const UserManagement = () => {
                     />
                     <div className="password-container">
                       <input
-                        required
+                        // required
                         name="password"
                         onChange={handleInputChange}
                         value={data.password}

@@ -3,6 +3,8 @@
 // controllers/userController.js
 import User from '../models/userModels.js';
 import allowedRoles from '../config/roles.js';
+import bcrypt  from 'bcrypt';
+
 
 
 // Create a new user
@@ -81,6 +83,9 @@ export const updateUser = async (req, res) => {
     const { id } = req.params;
     const { role, password, ...otherFields } = req.body;
 
+    console.log('Updating user with ID:', id);
+  console.log('Received data:', req.body);
+
     // Check if the user exists
     const userToUpdate = await User.findById(id);
     if (!userToUpdate) {
@@ -103,9 +108,11 @@ export const updateUser = async (req, res) => {
 
     // If the password is being updated, hash it
     if (password) {
+      console.log('Hashing password');
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
       updatedData.password = hashedPassword;
+      console.log('Password hashed successfully');
     }
 
     // Update the user
