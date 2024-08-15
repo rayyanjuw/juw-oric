@@ -1,0 +1,123 @@
+.viewallpublications-whole-page {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.viewAllPublications {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+.viewAllPublications button {
+  background-color: #51cbce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.bred-crumb {
+    margin: 0px 0rem !important;
+}
+
+.viewAllPublications {
+  background-color: #CBDBF9;
+}
+
+.viewAllPublications-heading {
+  padding: 1.5rem 1rem 0.7rem 1rem;
+  font-size: 22px;
+}
+
+
+.viewAllPublications-card {
+    background-color: white;
+    margin-top: 60px;
+    width: 100%;
+    margin-top: 60px;
+    display: "flex";
+    flex-direction: column;
+    min-height: 600px;
+    padding: 25px;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+
+
+
+.publications-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-section {
+    background-color: #f4f3ef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.publication-heading {
+  background-color: #CBDBF9;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.key-column {
+  background-color: #e2ecff;
+  padding: 10px;
+  font-weight: bold;
+  width: 30%;
+}
+
+.value-column {
+  padding: 10px;
+  width: 70%;
+}
+
+table td {
+  padding: 10px;
+}
+
+
+.juw-copyright {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 0.8571em;
+}

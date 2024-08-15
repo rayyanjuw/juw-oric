@@ -40,34 +40,3 @@ app.listen(port, ()=>{
     console.log(`Server Started At http://localhost:${port}`)
 })
 
-
-// import express from 'express';
-// import cors from 'cors';
-// import connectToMongo from './db';
-
-
-
-
-// connectToMongo();
-// const app = express()
-// const port = 5000
-
-// app.use(cors())
-
-
-// // Middleware
-// app.use(express.json())
-
-
-// // Available Routes
-// // app.use('/api/auth', require('./routes/auth'));
-// app.use()
-
-// // app.get('/', (req, res) => {
-// //   res.send('Hello Tajamul!')
-// // })
-
-
-// app.listen(port, () => {
-//   console.log(`ORIC Backend listening on port ${port}`)
-// })
