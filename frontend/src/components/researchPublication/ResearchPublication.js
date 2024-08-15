@@ -97,6 +97,7 @@ const ResearchPublication = () => {
 
 
   return (
+    <>
     <div className='research-publication-container'>
       <Sidebar />
       <div className="research-publication">
@@ -287,6 +288,7 @@ const ResearchPublication = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

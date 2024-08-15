@@ -46,34 +46,79 @@ export const createUser = async (req, res) => {
 };
   
   // Update an existing user
-  export const updateUser = async (req, res) => {
-    try {
-      const { id } = req.params;
-      const { role } = req.body;
+  // rayyan
+// export const updateUser = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const { role } = req.body;
 
-      // Check if the user exists
+//     // Check if the user exists
+//   const userToUpdate = await User.findById(id);
+//   if (!userToUpdate) {
+//     return res.status(404).json({ message: 'User not found' });
+//   }
+
+//   // Check if the current user is allowed to assign the new role
+//   const currentUserRole = req.user.role;
+//   if (req.body.role) {
+//     const rolesAllowed = allowedRoles[currentUserRole] || [];
+//     if (!rolesAllowed.includes(req.body.role)) {
+//       return res.status(403).json({ message: 'You do not have permission to assign this role' });
+//     }
+//   }
+
+//   // Update the user
+//   const updatedUser = await User.findByIdAndUpdate(id, req.body, { new: true });
+//   res.status(200).json(updatedUser);
+
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// };
+
+export const updateUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { role, password, ...otherFields } = req.body;
+
+    // Check if the user exists
     const userToUpdate = await User.findById(id);
     if (!userToUpdate) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: "User not found" });
     }
 
     // Check if the current user is allowed to assign the new role
     const currentUserRole = req.user.role;
-    if (req.body.role) {
+    if (role) {
       const rolesAllowed = allowedRoles[currentUserRole] || [];
-      if (!rolesAllowed.includes(req.body.role)) {
-        return res.status(403).json({ message: 'You do not have permission to assign this role' });
+      if (!rolesAllowed.includes(role)) {
+        return res
+          .status(403)
+          .json({ message: "You do not have permission to assign this role" });
       }
     }
 
-    // Update the user
-    const updatedUser = await User.findByIdAndUpdate(id, req.body, { new: true });
-    res.status(200).json(updatedUser);
+    // Prepare the updated data
+    let updatedData = { ...otherFields, role };
 
-    } catch (error) {
-      res.status(500).json({ message: error.message });
+    // If the password is being updated, hash it
+    if (password) {
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(password, salt);
+      updatedData.password = hashedPassword;
     }
-  };
+
+    // Update the user
+    const updatedUser = await User.findByIdAndUpdate(id, updatedData, {
+      new: true,
+    });
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
   
  
   // controllers/userController.js
