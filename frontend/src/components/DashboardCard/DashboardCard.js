@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./DashboardCard.css";
 import NavBar from "../shared-components/navbar/NavBar";
+import { useLocation } from "react-router-dom";
+import Breadcrumb from "../shared-components/breadcrumps/BreadCrumps";
 
 const DashboardCard = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
   const createInitialState = () => ({
     title: "",
     webOfScience: "",
@@ -47,17 +51,69 @@ const DashboardCard = () => {
   ];
   console.log(userInfos);
 
+  const breadCrumps = [
+    {
+      label: "Publications of Faculty",
+      path: "/",
+    },
+    {
+      label: "Conferences, Workshops Attended",
+      path: "/",
+    },
+    {
+      label: "Collaborative Research/Academic work",
+      path: "/",
+    },
+    {
+      label: "BS/MS/PhD Thesis/Project Details",
+      path: "/",
+    },
+  ];
+  // const breadCrumps = [
+  //   {
+  //     label: " Personal Information",
+  //     path: "/",
+  //   },
+  //   {
+  //     label: "Honor and Awards, Scholarship",
+  //     path: "/",
+  //   },
+  //   {
+  //     label: "Membership",
+  //     path: "/",
+  //   },
+  //   {
+  //     label: "Publications",
+  //     path: "/researchpublication",
+  //   },
+  //   {
+  //     label: "Research Grants and Contracts",
+  //     path: "/add-research-grants-and-contracts",
+  //   },
+  // ];
+
   return (
     <>
       <div className="dashboard-card1">
-        <div className="navbar-div">
+        <div className="departmental_navbar-div">
           <NavBar />
         </div>
+
+        {/* <div className="navbar-div">
+          <NavBar />
+        </div> */}
         <div className="card-content">
           <h3>Departmental Research Data | Publications of Faculty</h3>
-          <p>Publications of Faculty:</p>
+
+          <div className="drd-bredcrumb">
+            <Breadcrumb items={breadCrumps} activePath={currentPath} />
+          </div>
+          {/* <div className="bred-crumb">
+            <Breadcrumb items={breadCrumps} activePath={currentPath} />
+          </div> */}
         </div>
         <div className="card-items">
+          <p>Publications of Faculty:</p>
           {userInfos.map(({ state, setState }, index) => (
             <div className="card-item" key={index}>
               <div className="card-title">
@@ -81,9 +137,9 @@ const DashboardCard = () => {
           ))}
           <button className="btn">Save</button>
         </div>
-        <p style={{ display: "flex", flexDirection: "row-reverse" }}>
-          © 2024, all rights reserved by Jinnah University for Women.
-        </p>
+        <div className="juw-copyright">
+          <p>© 2024, all rights reserved by Jinnah University for Women.</p>
+        </div>
       </div>
     </>
   );

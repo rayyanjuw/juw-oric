@@ -160,23 +160,23 @@ const ViewAllPublications = () => {
   const breadCrumps = [
     {
       label: " Personal Information",
-      path: "/",
+      path: "/researchportfolio",
     },
     {
       label: "Honor and Awards, Scholarship",
-      path: "/",
+      path: "/honorandawards",
     },
     {
       label: "Membership",
-      path: "/",
+      path: "/membership",
     },
     {
       label: "Publications",
-      path: "/researchpublication",
+      path: "/viewallpublications",
     },
     {
       label: "Research Grants and Contracts",
-      path: "/",
+      path: "/research-grants-and-contracts",
     },
   ];
 
@@ -184,12 +184,12 @@ const ViewAllPublications = () => {
   const data = [
     {
       Articletype: "Original Research",
-      TitleofManuscript: "1",
-      Journal: "1",
+      TitleofManuscript: "Anti-depressant Effect of Fluoxetine on Brain Indolamine Levels to Improve the RA Associated Depression in Adjuvant Induced Arthritic Rats",
+      Journal: "RADS JOURNAL OF PHARMACY AND ALLIED HEALTH SCIENCES",
       ISSN: "1",
       Vol: "1",
       Issue: "1",
-      URLofPublication: "",
+      URLofPublication: "https://jphs.juw.edu.pk/index.php/jphs/article/view/26/57",
       DateofPublication: "2024-02-01",
       HECCategory: "W",
       WebofScience: "Yes",
@@ -264,9 +264,12 @@ const ViewAllPublications = () => {
         </div>
         <div className="viewAllPublications-card">
           <h4>Research portfolio | Publications</h4>
-          <div className="bred-crumb">
+          <div className="VAP_bred-crumb">
             <Breadcrumb items={breadCrumps} activePath={currentPath} />
           </div>
+          {/* <div className="bred-crumb">
+            <Breadcrumb items={breadCrumps} activePath={currentPath} />
+          </div> */}
           <div className="h4-heading" style={{ marginTop: "20px" }}>
             <h4>Publications:</h4>
           </div>
@@ -303,8 +306,11 @@ const ViewAllPublications = () => {
             ))}
           </div>
         </div>
-          <div className="juw-copyright">
+          {/* <div className="juw-copyright">
             <h6>© 2024, all rights reserved by Jinnah University for Women.</h6>
+          </div> */}
+          <div className="juw-copyright">
+            <p>© 2024, all rights reserved by Jinnah University for Women.</p>
           </div>
       </div>
     </div>

@@ -1,12 +1,274 @@
+/* responsive 3 */
 .sidebar {
-  width: 100%;
-  min-height: 100vh;
-  border: 1.5px solid #a9a9a9;
-  background: #0037a5 !important;
-  border-top: 0;
+  width: 250px;
+  background-color: #0037a5;
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  height: 100vh;
+  overflow-y: auto ;
   padding-top: 10px;
-  font-size: max(1vw, 10px);
+  transition: width 0.3s ease-in-out;
+  z-index: 1 !important; 
 }
+
+/* .sidebar.closed {
+  width: 60px;
+} */
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo img {
+  width: 80%;
+  max-width: 150px;
+  height: auto;
+}
+
+.sidebar-options {
+  padding: 0;
+}
+
+.accordion .MuiAccordionSummary-root {
+  padding: 0;
+}
+
+.accordion .MuiAccordionDetails-root {
+  padding-left: 16px;
+}
+
+.icons-sidebar {
+  /* font-size: 1.5em; */
+  font-size: 18px;
+}
+
+.sidebar-item-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+/* .sidebar.closed .sidebar-item-text {
+  opacity: 0;
+} */
+
+/* .underline-none {
+  text-decoration: none;
+  color: #ffffff;
+} */
+
+.underline-none {
+  text-decoration: none !important;
+  font-size: 10.5px !important;
+  font-weight: 200;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 2px 0 !important;
+}
+
+.toggle-button {
+  position: fixed; /* Fix the toggle button position as well */
+  top: 10px;
+  left: 250px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: left 0.3s ease-in-out;
+  z-index: 2; /* Ensure the toggle button is on top of the sidebar */
+}
+
+.css-10hburv-MuiTypography-root {
+  /* margin: 0; */
+  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+  font-size: 14px !important;
+  /* font-weight: 400; */
+  /* line-height: 1.5; */
+  /* letter-spacing: 0  .00938em; */
+  /* display: block; */
+}
+
+.sidebar.closed ~ .toggle-button {
+  left: 60px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    position: fixed !important;
+  }
+
+  .sidebar.open {
+    width: 270px;
+  }
+
+  .sidebar.closed {
+    /* width: 50px; */
+    width: 0px;
+  }
+
+  .toggle-button {
+    left: 220px;
+  }
+
+  .sidebar.open ~ .toggle-button {
+    left: 270px;
+  }
+
+  .sidebar.closed ~ .toggle-button {
+    left: 20px;
+  }
+
+  .sidebar-options {
+    padding: 0;
+    font-size: 8px;
+  }
+
+  span.MuiTypography-root
+    MuiTypography-body1
+    MuiListItemText-primary
+    css-10hburv-MuiTypography-root {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+  }
+
+  .css-10hburv-MuiTypography-root {
+    margin: 0 !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5 !important;
+    letter-spacing: 0.00938em;
+    font-size: 10px;
+    display: block !important;
+  }
+}
+
+/* responsive 2:  */
+/* .sidebar {
+  width: 250px; 
+  background-color: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.closed {
+  width: 60px; 
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo img {
+  width: 80%;
+  max-width: 150px;
+  height: auto;
+}
+
+.sidebar-options {
+  padding: 0;
+}
+
+.accordion .MuiAccordionSummary-root {
+  padding: 0;
+}
+
+.accordion .MuiAccordionDetails-root {
+  padding-left: 16px;
+}
+
+.icons-sidebar {
+  font-size: 1.5em;
+}
+
+.sidebar-item-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.sidebar.closed .sidebar-item-text {
+  opacity: 0;
+}
+
+.underline-none {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 250px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar.closed ~ .toggle-button {
+  left: 60px;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px; 
+  }
+  
+  .sidebar.open {
+    width: 270px; 
+    z-index: 1
+  }
+
+  .sidebar.closed {
+    width: 50px; 
+    
+  }
+
+  .toggle-button {
+    left: 220px; 
+    
+  }
+
+  .sidebar.open ~ .toggle-button {
+    left: 270px;
+  }
+
+  .sidebar.closed ~ .toggle-button {
+    left: 50px;
+  }
+} */
+
+/* responsive 1 : 23082024 */
+/* .sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+
 
 .sidebar-logo {
   display: flex;
@@ -44,9 +306,7 @@
   align-items: center;
   justify-content: start;
   gap: 14px;
-  /* border: 1px solid #a9a9a9; */
   border-right: 0;
-  /* color: black; */
   padding: 8px 10px;
   border-radius: 3px 0px 0px 3px;
   cursor: pointer;
@@ -62,7 +322,7 @@
 }
 
 .text-12 > span {
-  font-size: 11px !important;
+  font-size: 12px !important;
   padding-top: .25rem !important;
 }
 
@@ -80,11 +340,38 @@
   margin: 5px 0 !important;
 }
 
+.css-htgv3y-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  margin: 0 !important;
+}
+
+p.css-3ycnp-MuiTypography-root {
+    padding: 0 30px !important;
+}
+
+.css-15yzzlx-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 40px !important;
+}
 
 
 
-/* current working code final */
 
+.sidebar.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+  }
+} */
+
+/* current working code */
 /* .sidebar {
   width: 100%;
   min-height: 100vh;
@@ -100,6 +387,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+}
+
+.sidebar-logo img {
+  height: 120px;
 }
 
 .sidebar-logo p {
@@ -113,22 +405,147 @@
   padding-top: 50px;
   display: flex;
   flex-direction: column;
+ 
+  padding: 1.5rem .4rem;
+}
+
+.icons-sidebar {
+    font-size: 16px;
+    color: whitesmoke;
 }
 
 .sidebar-option {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  justify-content: start;
+  gap: 14px;
   border-right: 0;
   padding: 8px 10px;
   border-radius: 3px 0px 0px 3px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .sidebar-option p {
   color: white;
-  font-size: 10px;
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 1px;
 }
 
- */
+.text-12 > span {
+  font-size: 12px !important;
+  padding-top: .25rem !important;
+}
+
+.underline-none {
+  text-decoration: none !important;
+  font-size: 10.5px !important;
+  letter-spacing: .6px;
+  font-weight: 200;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 2px 0 !important;
+}
+
+.css-eqpfi5-MuiAccordionSummary-content {
+  margin: 5px 0 !important;
+}
+
+.css-htgv3y-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  margin: 0 !important;
+}
+
+p.css-3ycnp-MuiTypography-root {
+    padding: 0 30px !important;
+}
+
+.css-15yzzlx-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 40px !important;
+}
+
+
+
+
+
+/* responsive */
+/* .sidebar {
+  width: 240px;
+  min-height: 100vh;
+  border: 1.5px solid #a9a9a9;
+  background: #0037a5 !important;
+  border-top: 0;
+  padding-top: 10px;
+  font-size: max(1vw, 10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo img {
+  height: 120px;
+}
+
+.sidebar-options {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0.4rem;
+}
+
+.icons-sidebar {
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.text-12 > span {
+  font-size: 12px !important;
+  padding-top: 0.25rem !important;
+}
+
+.underline-none {
+  text-decoration: none !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.6px;
+  font-weight: 200;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 2px 0 !important;
+}
+
+
+.toggle-button {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .toggle-button {
+    display: block;
+  }
+} */

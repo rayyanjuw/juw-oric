@@ -1251,6 +1251,9 @@ const UserManagement = () => {
               </div>
             </div>
           </div>
+          <div className="juw-copyright">
+            <p>© 2024, all rights reserved by Jinnah University for Women.</p>
+          </div>
         </div>
       </div>
     </>

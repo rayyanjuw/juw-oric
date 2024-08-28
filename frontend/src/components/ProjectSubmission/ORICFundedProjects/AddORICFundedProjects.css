@@ -1,0 +1,114 @@
+.addoricfundedproject_container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.add-oricfundedproject {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+.addoric_navbar-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 20px;
+}
+
+.addoric_navbar-div h4 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #66615b;
+}
+
+.add-oricfundedproject-card {
+  background-color: white;
+  margin-top: 15px;
+  width: 100%;
+  display: "flex";
+  flex-direction: column;
+  min-height: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+
+.add-oricfundedproject-card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: #252422;
+}
+
+.add-oricfundedproject-card p {
+  background-color: #e9ecef;
+  display: flex;
+  flex-wrap: wrap;
+  color: #252422;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.add-oricfundedproject_multiInputFields input {
+  width: calc(100% - 20px); 
+  margin: 10px 0; 
+  padding: 6px;
+  border: 1px solid #dddddd;
+  color: #66615b;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; 
+}
+
+.title-input {
+  margin-bottom: 15px;
+}
+
+.two-inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.two-inputs .InputGroup {
+  flex: 1;
+}
+
+.InputGroup {
+  margin-bottom: 15px;
+}
+
+.InputGroup label {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+.juw_copyright p {
+  margin-top: 80px;
+  text-align: right;
+  font-size: 0.8571em;
+  line-height: 1.8;
+  color: #66615b;
+}

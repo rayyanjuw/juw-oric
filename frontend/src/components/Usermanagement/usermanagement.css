@@ -1,204 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .whole-page-container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .sidebar {
-    width: 20%;
-    background: #0037a5;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    padding-top: 10px;
-    font-size: max(1vw, 10px);
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: max(1vw, 10px);
 }
 
 .user-management {
-    flex: 1;
-    overflow-y: auto;
-    background-color: #F4F3EF !important;
-    padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
 }
 
-
-
 .Modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background: #f4f3ef;
-    padding: 20px;
-    border-radius: 4px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: #f4f3ef;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 500px;
+  width: 100%;
+}
 
-
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
 
 .whole-page-container {
-    display: flex;
-  }
+  display: flex;
+}
 
-  .user-management {
-    flex: 1;
-    padding: 20px;
-    background-color: #f8f9fa;
-  }
-  
+.user-management {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
 
-  .user-management button {
+.user-management button {
+  background-color: #51cbce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 30px;
+}
 
-    background-color: #51cbce;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 13px;
-    cursor: pointer;
-    border-radius: 30px;
-  }
-  
-  .user-management button:hover {
-      background-color: #51cbce;
-  }
-  
-  .Modal {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .create-user {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .create-user-left {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .create-user-left .title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .multi-fields {
-    margin-bottom: 10px;
-    
-  }
-  
-  .multi-fields label,
-  .multi-fields select,
-  .multi-fields input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .create-user-left input[type="text"],
-  .create-user-left input[type="email"],
-  .create-user-left input[type="password"],
-  .create-user-left select {
-    width: 100%;
-  }
-  
-  .create-user button {
-    background: #51cbce;
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 120px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
+.user-management button:hover {
+  background-color: #51cbce;
+}
 
-  .create-user-btn {
-    margin: 10px 7px;
-  }
+.Modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  /* max-width: 600px; */
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
-  .create-user button:hover {
-    background-color: #218838;
-  }
-  
- .submit-button {
-    color: #51cbce;
-    background: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.create-user {
+  display: flex;
+  flex-direction: column;
+}
 
+.create-user-left {
+  display: flex;
+  flex-direction: column;
+}
 
-  .user-management-card {
-    background-color: white;
-    margin-top: 30px;
-    padding: 25px;
-    border-radius: 20px;
-  }
+.create-user-left .title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-  .user-management-card h4{
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 20px;
-  }
+.multi-fields {
+  margin-bottom: 10px;
+}
 
-  .user-management-card button {
-    font-weight: bold;
-  }
+.multi-fields label,
+.multi-fields select,
+.multi-fields input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
+.create-user-left input[type="text"],
+.create-user-left input[type="email"],
+.create-user-left input[type="password"],
+.create-user-left select {
+  width: 100%;
+}
 
-  .user-management-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    text-align: left;
-  }
-  
-  .user-management-table thead tr {
-    background-color: #f2f2f2;
-    text-align: left;
-  }
-  
+.create-user button {
+  background: #51cbce;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 110px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.create-user-btn {
+  margin: 10px 7px;
+}
+
+.create-user button:hover {
+  background-color: #218838;
+}
+
+.submit-button {
+  color: #51cbce;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-management-card {
+  background-color: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.user-management-card h4 {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.user-management-card button {
+  font-weight: bold;
+}
+
+.user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+.user-management-table thead tr {
+  background-color: #f2f2f2;
+  text-align: left;
+}
 
 .list-table-format {
   display: flex;
@@ -225,7 +213,6 @@
   font-size: 13px;
 } */
 
-
 .list-table-format.title {
   background-color: white;
   padding: 20px 10px;
@@ -240,6 +227,7 @@
 .list-table-format p {
   flex: 1;
   margin: 0;
+  font-size: 12px;
 }
 
 .list-table-format button {
@@ -252,8 +240,7 @@
   font-size: 0.8571em;
   padding: 5px 7px;
   color: white;
-  /* background-color: #007bff;  */
-  border: none; 
+  border: none;
   cursor: pointer;
 }
 
@@ -262,7 +249,6 @@
   text-align: center;
 }
 
-
 /* password field */
 
 .password-container {
@@ -270,7 +256,7 @@
 }
 
 .password-container input {
-  padding-right: 30px; /* Adjust this to make room for the icon */
+  padding-right: 30px;
 }
 
 .eye-icon {
@@ -283,3 +269,41 @@
   color: #888; /* Adjust the color as needed */
 }
 
+@media (max-width: 600px) {
+  /* .Modal {
+    width: 80%;
+    padding: 15px;
+  } */
+
+  .Modal {
+    width: 95%;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  /* .Edit-Modal button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+
+  .list-table {
+    overflow: scroll;
+  }
+
+  .multi-fields input,
+  .multi-fields select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .list-table-format {
+    flex-direction: row;
+    width: 100vw;
+    margin: 10px;
+    align-items: flex-start;
+  }
+}

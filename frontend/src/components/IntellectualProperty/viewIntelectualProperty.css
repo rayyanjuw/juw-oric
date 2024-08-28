@@ -1,0 +1,118 @@
+.intelproperty-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.intelproperty {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+.viewintell_navbar-div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.viewintell_navbar-div h4 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #66615b;
+}
+
+/* .intelproperty hr {
+  color: #ddd;
+  font-weight: bold;
+} */
+
+.intelproperty-card {
+  background-color: white;
+  margin-top: 15px;
+  width: 100%;
+  display: "flex";
+  flex-direction: column;
+  min-height: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+
+.intelproperty-card h5 {
+  font-size: 1.57em;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+.intelproperty-card button {
+  background-color: #51cbce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 1px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.intelproperty-card button:hover {
+  background-color: #51ccfc;
+}
+
+.intelproperty-table-data h5 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.intelproperty-table-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.intelproperty-list-table {
+  display: flex;
+  border-top: 1px solid #dee2e6;
+  padding: 12px 0px;
+  flex-direction: column;
+  margin-left-right: 0;
+}
+
+.intelproperty-list-table-format {
+  display: flex;
+  border-top: 1px solid #dee2e6;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.intelproperty-list-table-format.title {
+  font-weight: normal;
+}
+
+.intelproperty-list-table-format b {
+  font-weight: normal;
+  width: 30%;
+  color: #333;
+}
+
+.intelproperty-list-table-format span {
+  width: 70%;
+  color: #555;
+}

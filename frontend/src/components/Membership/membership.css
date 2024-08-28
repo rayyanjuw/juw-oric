@@ -1,0 +1,183 @@
+.membership-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: max(1vw, 10px);
+}
+
+.membership_bred-crumb {
+  margin: 0 10px !important;
+  width: calc(100% - 40px);
+  background-color: #e9ecef;
+}
+
+.membership {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+/* .navbar-div {
+  margin: 0 0 1.4rem 0;
+} */
+
+.membership-card {
+  background-color: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.membership-card h3 {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.membership-card h5 {
+  /* font-weight: 400; */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.membership_button {
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 5vh;
+  margin-top: 25px;
+  margin-left: 1px;
+  color: white;
+  background-color: #51cbce;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  border-width: 1px;
+}
+
+
+
+/* responsiveness */
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 25%;
+    font-size: 0.875rem; /* Adjust font size for medium screens */
+  }
+
+  .membership_bred-crumb {
+    width: calc(100% - 20px);
+  }
+
+  .membership_button {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 4vh;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 30%;
+  }
+
+  .membership {
+    padding: 15px;
+  }
+
+  .membership-card {
+    width: calc(100% - 30px); /* Adjust width for medium screens */
+    margin: 15px auto; /* Adjust margin for medium screens */
+  }
+
+  .membership_button {
+    font-size: 14px;
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    font-size: 0.75rem; /* Smaller font size for smaller screens */
+  }
+
+  .membership {
+    padding: 10px;
+  }
+
+  .membership-card {
+    width: 100%;
+    margin: 10px 0; /* Adjust margin for small screens */
+    height: auto; /* Allow card to adjust height */
+  }
+
+  .membership-card h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .membership-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .membership_button {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11vw;
+    height: 4vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .membership-card h5 {
+    font-size: 1rem;
+  }
+
+  .membership_button {
+    font-size: 13px;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+  }
+
+  .juw-copyright p {
+    font-size: 0.75em;
+  }
+}
