@@ -15,19 +15,20 @@ const ResearchGrants = () => {
   const breadCrumps = [
     {
       label: " Personal Information",
-      path: "/",
+      path: "/researchportfolio",
     },
     {
       label: "Honor and Awards, Scholarship",
-      path: "/",
+      path: "/honorandawards",
     },
     {
       label: "Membership",
-      path: "/",
+      path: "/membership",
     },
     {
       label: "Publications",
-      path: "/researchpublication",
+      // path: "/researchpublication",
+      path: "/viewallpublications",
     },
     {
       label: "Research Grants and Contracts",

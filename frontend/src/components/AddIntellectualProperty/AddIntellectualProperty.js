@@ -9,7 +9,7 @@ const AddIntellectualProperty = () => {
     OwnerofIP: "Jinnah University of Women",
     Address: "Jinnah University for Women, 5-C Nazimabad, 74600, Karachi.",
     FieldofTheInvention: "",
-    BackgroundOfTheInvention: "",
+    BackgroundOfTheInvention: "", 
     DescriptionOfInvention: "",
     References: "",
     InventiveSteps: "",
@@ -115,10 +115,7 @@ const AddIntellectualProperty = () => {
                 rows="2"
                 value={addintellectualproperty["References"]}
                 name="References"
-                placeholder="Not more than 10 
-                    1. 
-                    2. 
-                    3."
+                placeholder="Not more than 10"
                 onChange={handleChange}
               />
             </div>
@@ -133,8 +130,8 @@ const AddIntellectualProperty = () => {
               />
             </div>
 
-            <div className="save-btn">
-              <button className="savebut">Save</button>
+            <div className="AIP_save-btn">
+              <button className="AIP_savebut">Save</button>
             </div>
           </div>
         </div>

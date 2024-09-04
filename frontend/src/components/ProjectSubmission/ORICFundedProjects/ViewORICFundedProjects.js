@@ -2,13 +2,23 @@ import React from "react";
 import "./viewORICFundedProjects.css";
 import Sidebar from "../../Sidebar/Sidebar";
 import NavBar from "../../shared-components/navbar/NavBar";
+import { useNavigate } from "react-router-dom";
+
 
 const ViewORICFundedProjects = () => {
+
+  const navigate = useNavigate();
+  
+    const handleViewClick = () => {
+        navigate("/oric-funded-projects");
+      };
+
+
   const ORICProjects = [
     {
-      Title: "test",
-      NameofPI: "test",
-      NameofFaculty: "test",
+      Title: "Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts.",
+      NameofPI: "Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts.",
+      NameofFaculty: "Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts. Low cost effective production of alginate salts.",
       TotalBudgetRequested: "30000",
     },
     {
@@ -48,7 +58,7 @@ const ViewORICFundedProjects = () => {
                 <div key={index} className="vieworicfundedproject-list-table">
                   <div className="View_project_detail">
                     <h5>Project Details #{index + 1}</h5>
-                    <button type="button">VIEW</button>
+                    <button type="button" onClick={handleViewClick}>VIEW</button>
                   </div>
                   <div className="vieworicfundedproject-list-table-format title">
                     <b>Title:</b>

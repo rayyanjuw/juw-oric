@@ -1,0 +1,266 @@
+/* original code */
+/* .oricfundedproject_container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background: #0037a5;
+    position: sticky;
+    color: #ffffff;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    font-size: 10px;
+    z-index: 1;
+  }
+  
+  .oricfundedproject {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f4f3ef !important;
+    padding: 20px;
+  }
+
+
+  .oricfundedproject-card {
+    background-color: white;
+    margin-top: 15px;
+    width: 100%;
+    display: "flex";
+    flex-direction: column;
+    min-height: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    flex-grow: 1;
+  }
+
+  .oricfundedproject-card button {
+    background-color: #51cbce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 1px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .oricfundedproject-card button:hover {
+    background-color: #51ccfc;
+  }
+
+  .oricfundedproject-card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 1.4em;
+    font-weight: 400;
+    color: #252422;
+  }
+
+
+  .oricfundedproject-table-data h5 {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Montserrat", "Helvetica Neue", "Arial", "sans-serif";
+  }
+  
+  .oricfundedproject-table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .oricfundedproject-table-container h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+
+
+  .oricfundedproject-list-table {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    padding: 12px 0px;
+    flex-direction: column;
+    margin-left-right: 0;
+  }
+  
+  .oricfundedproject-list-table-format {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .oricfundedproject-list-table-format.title {
+    font-weight: normal;
+  }
+  
+  .oricfundedproject-list-table-format b {
+    font-weight: 450;
+    font-size: 15px;
+    width: 18%;
+    color: #333;
+  }
+  
+  .oricfundedproject-list-table-format span {
+    width: 70%;
+    color: #555;
+    font-size: 15px;
+    flex: 1;
+    margin-left: 40px;
+  }
+  
+  .juw_copyright p {
+    margin-top: 80px;
+    text-align: right;
+    font-size: 0.8571em;
+    line-height: 1.8;
+    color: #66615b;
+  } */
+
+
+
+/* responsive */
+.oricfundedproject_container {
+    display: flex;
+    height: 100vh;
+    /* position: relative; */
+}
+  
+.sidebar {
+    width: 20%;
+    background: #0037a5;
+    position: sticky;
+    color: #ffffff;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    font-size: 10px;
+    z-index: 1; 
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the sidebar */
+}
+  
+.oricfundedproject {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f4f3ef !important;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for content shift */
+}
+
+
+  .oricfundedproject-card {
+    background-color: white;
+    margin-top: 15px;
+    width: 100%;
+    display: "flex";
+    flex-direction: column;
+    min-height: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    flex-grow: 1;
+  }
+
+  .oricfundedproject-card button {
+    background-color: #51cbce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 1px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .oricfundedproject-card button:hover {
+    background-color: #51ccfc;
+  }
+
+  .oricfundedproject-card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 1.4em;
+    font-weight: 400;
+    color: #252422;
+  }
+
+
+  .oricfundedproject-table-data h5 {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Montserrat", "Helvetica Neue", "Arial", "sans-serif";
+  }
+  
+  .oricfundedproject-table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .oricfundedproject-table-container h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  /* Add a class for toggling the sidebar */
+  .sidebar.open {
+      transform: translateX(0); /* Open sidebar */
+  }
+
+  .sidebar.closed {
+      transform: translateX(-100%); /* Hide sidebar off-screen */
+  }
+
+
+  .oricfundedproject-list-table {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    padding: 12px 0px;
+    flex-direction: column;
+    /* margin-left-right: 0; */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .oricfundedproject-list-table-format {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .oricfundedproject-list-table-format.title {
+    font-weight: normal;
+  }
+  
+  .oricfundedproject-list-table-format b {
+    font-weight: 450;
+    font-size: 15px;
+    width: 18%;
+    color: #333;
+  }
+  
+  .oricfundedproject-list-table-format span {
+    width: 70%;
+    color: #555;
+    font-size: 15px;
+    flex: 1;
+    margin-left: 40px;
+  }
+  
+  .juw_copyright p {
+    margin-top: 80px;
+    text-align: right;
+    font-size: 0.8571em;
+    line-height: 1.8;
+    color: #66615b;
+  }
+
+

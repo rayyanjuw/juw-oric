@@ -50,35 +50,32 @@ nav.breadcrumb {
 }
 
 
-/* Responsive adjustments for breadcrumb */
+
 @media (max-width: 768px) {
     .breadcrumb ul {
-        justify-content: flex-start; /* Align to the start on smaller screens */
-        gap: 0.3rem; /* Reduce gap between items */
+        justify-content: flex-start;
+        gap: 0.3rem;
         padding-left: 10px;
     }
 
     .bred-label {
-        font-size: 10px; /* Smaller font size */
+        font-size: 10px;
     }
 
     .separator {
-        margin: 0 3px; /* Smaller separator space */
+        margin: 0 3px;
     }
 }
 
 @media (max-width: 480px) {
     .breadcrumb ul {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         align-items: flex-start;
-        gap: 0.2rem; /* Further reduce gap */
+        gap: 0.2rem;
     }
 
     .bred-label {
-        font-size: 9px; /* Smaller font size */
+        font-size: 11px;
     }
 
-    .separator {
-        display: none; /* Hide separators on very small screens */
-    }
 }

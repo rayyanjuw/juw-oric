@@ -7,20 +7,22 @@ const ViewGrants = () => {
 
     const Grants = [
         {
-          Title: "test",
+          Title: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
           NameofPI: "test",
-          NameofPIInstitute: "test",
+          NameofPIInstitute: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
           TotalBudgetRequested: "30000",
         }
       ];
-
 
 
   return (
     <div className="viewgrants-container">
       <Sidebar />
       <div className="viewgrants">
-        <div className="navbar-div">
+        {/* <div className="navbar-div">
+          <NavBar />
+        </div> */}
+        <div className="viewgrants_navbar-div">
           <NavBar />
         </div>
         <div className="viewgrants-card">

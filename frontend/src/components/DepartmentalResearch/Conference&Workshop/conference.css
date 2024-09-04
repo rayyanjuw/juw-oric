@@ -1,0 +1,182 @@
+.conference-main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background: #0037a5;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: max(1vw, 10px);
+}
+
+.conference-card {
+  padding: 20px;
+  background-color: #f4f3ef !important;
+  border-radius: 8px;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.conference-content {
+  margin-bottom: 20px;
+}
+
+.conference_navbar-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: -40px;
+}
+
+.conference-card-items h3 {
+  margin-bottom: 20px;
+  margin-top: 1px;
+  font-size: 1.47em;
+  font-weight: 400;
+  color: #333;
+}
+
+.conference-card-items {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 65px;
+  border-radius: 8px;
+}
+
+.conference-card-items h4 {
+  font-size: 1.314em;
+  margin-top: 30px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.conference-bredcrumb {
+  margin-top: 20px;
+  margin: 0;
+  width: 100%;
+  background-color: #e9ecef;
+}
+
+.conference-card-item {
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.conference-card-title h4 {
+  /* margin-bottom: 10px; */
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin: 0;
+  color: #333;
+  margin-top: 0;
+}
+
+.conference-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.conference-input-group label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #9A9A9A;
+}
+
+.conference-input-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.conference-card-item .conference-input-container {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.conference_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 40px;
+  margin: 20px auto;
+  color: white;
+  background-color: #51cbce;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+
+}
+
+
+@media (max-width: 1100px) {
+  .conference-card-item .conference-input-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* margin-top: 15px; */
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .conference-card-item .conference-input-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .conference_btn {
+    width: 80%;
+  }
+
+  .conference-content h4 {
+    /* font-size: 16px; */
+    /* font-size: 1.34em; */
+    font-size: 1.4em;
+    line-height: 1.45em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .conference-card-items p {
+    font-size: 18px;
+  }
+
+  .conference-card-items h3 {
+    font-size: 1.4em;
+    color: #252422;
+  }
+}
+
+@media (max-width: 480px) {
+  .conference-card-item .conference-input-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .conference_btn {
+    width: 100%;
+  }
+
+  .conference--content h3 {
+    font-size: 14px;
+  }
+
+  .conference-card-items p {
+    font-size: 13px;
+  }
+}

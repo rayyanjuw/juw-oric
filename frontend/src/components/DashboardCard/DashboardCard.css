@@ -146,7 +146,7 @@
  */
 
 /* responsive */
-.dashboard-card1 {
+/* .dashboard-card1 {
   padding: 20px;
   background-color: #f4f3ef !important;
   border-radius: 8px;
@@ -200,10 +200,7 @@
   width: calc(100% - 40px);
   background-color: #e9ecef;
 }
-/* .bred-crumb {
-  margin: 0 10px !important;
-  width: calc(100% - 40px);
-} */
+
 
 .card-item {
   background-color: #fff;
@@ -265,49 +262,7 @@
   background-color: #121212;
 }
 
-/* Responsive adjustments */
-/* @media (max-width: 1100px) {
-    .card-item .input-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .card-item .input-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .btn {
-      width: 80%;
-    }
-  
-    .card-content h3 {
-      font-size: 16px;
-    }
-  
-    .card-items p {
-      font-size: 18px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card-item .input-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .btn {
-      width: 100%;
-    }
-  
-    .card-content h3 {
-      font-size: 14px;
-    }
-  
-    .card-items p {
-      font-size: 16px;
-    }
-  }
-   */
+
 
 @media (max-width: 1100px) {
   .card-item .input-container {
@@ -351,4 +306,184 @@
   .card-items p {
     font-size: 16px;
   }
+} */
+
+
+
+/* improvement */
+
+.dashboard-card1 {
+  padding: 20px;
+  background-color: #f4f3ef !important;
+  border-radius: 8px;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
+
+.dashboardCard_card-content {
+  margin-bottom: 20px;
+}
+
+.drd-bredcrumb {
+  margin: 0;
+  width: 100%;
+  background-color: #e9ecef;
+}
+
+.departmental_navbar-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: -40px;
+}
+
+.dashboardCard_card-content h3 {
+  margin-bottom: 20px;
+  margin-top: 1px;
+  font-size: 1.47em;
+  font-weight: 400;
+  color: #333;
+}
+
+.dashboardCard_card-items {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dashboardCard_card-items p {
+  font-size: 1.314em;
+  margin-top: 30px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.dashboardCard_card-item {
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title h4 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin: 0;
+  color: #333;
+  margin-top: 0;
+}
+
+/* .input-group { */
+.dashboardCard_input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.dashboardCard_input-group label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #555;
+}
+
+.dashboardCard_input-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dashboardCard_card-item .input-container {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dashboardCard_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 40px;
+  margin: 20px auto;
+  color: white;
+  background-color: #51cbce;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  .dashboardCard_card-item .input-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 15px;
+  }
+
+  .dashboardCard_btn {
+    width: 20%;
+  }
+
+
+  .dashboardCard_input-group label {
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #555;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardCard_card-item .input-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .dashboardCard_btn {
+    width: 20%;
+  }
+
+  .dashboardCard_card-content h3 {
+    font-size: 16px;
+  }
+
+  .dashboardCard_card-items p {
+    font-size: 18px;
+  }
+
+  .dashboardCard_input-group label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #555;
+  }
+
+  button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-w92lsb-MuiButtonBase-root-MuiIconButton-root {
+    margin-top: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardCard_card-item .input-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .dashboardCard_btn {
+    width: 100%;
+  }
+
+  .dashboardCard_card-content h3 {
+    font-size: 20px;
+  }
+
+  .dashboardCard_card-items p {
+    font-size: 22px;
+  }
+}
+
+

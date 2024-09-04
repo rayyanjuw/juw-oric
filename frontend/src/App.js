@@ -25,13 +25,20 @@ import ViewORICFundedProjects from './components/ProjectSubmission/ORICFundedPro
 import AddORICFundedProjects from './components/ProjectSubmission/ORICFundedProjects/AddORICFundedProjects';
 import ViewGrants from './components/ProjectSubmission/International_NationalGrants/ViewGrants';
 import AddGrants from './components/ProjectSubmission/International_NationalGrants/AddGrants';
-
+import ORICFundedProject from './components/ProjectSubmission/ORICFundedProjects/ORICFundedProject';
+import Conference from './components/DepartmentalResearch/Conference&Workshop/Conference';
+import CollaborativeWork from './components/DepartmentalResearch/CollaborativeWork/CollaborativeWork';
+import ThesisProjectDetails from './components/DepartmentalResearch/ThesisProjectDetails/ThesisProjectDetails';
 
 function App() {
   return (
     <>
     <div className='app'>
     <Routes>
+      {/* <Route path="/sides" element={<Sides/>}/> */}
+
+
+
       <Route path="/" element={<SignInSide/>}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
       
@@ -44,13 +51,11 @@ function App() {
       {/* Oric Funded Project */}
       <Route path="/view-oric-funded-projects" element={<ViewORICFundedProjects/>}/>
       <Route path="/add-oric-funded-projects" element={<AddORICFundedProjects/>}/>
+      <Route path="/oric-funded-project" element={<ORICFundedProject/>}/>
+
       {/* International/National Grants */}
       <Route path="/view-international/national-grants" element={<ViewGrants/>}/>
-      <Route path="/add-international/national-grants" element={<AddGrants/>}/>
-
-      
-
-      
+      <Route path="/add-international/national-grants" element={<AddGrants/>}/>      
       
 
       {/* Research Portfolio */}
@@ -75,10 +80,13 @@ function App() {
 
       {/* Departmental Research Data */}
       <Route path="/departmental-research-data-publications-of-faculty" element={<DepartmentalResearch/>} />
+      <Route path="/departmental-research-data-conferences-workshops-attended" element={<Conference/>} />
+      <Route path="/departmental-research-data-collaborative-research-academic-work" element={<CollaborativeWork/>} />
+      <Route path="/departmental-research-data-thesis-project-details" element={<ThesisProjectDetails/>} />
+
 
       {/* Downloadable */}
       <Route path="/downloadable" element={<Downloadable/>}/>
-
 
       {/* User % Roles */}
       <Route path="/usermanagement" element={<UserManagement/>}/>

@@ -37,17 +37,6 @@ const AddGrants = () => {
     CNIC_PassportNo: "",
   });
 
-//   const facultyTitle = [
-//     "Institution Name",
-//     "Street Address:",
-//     "City",
-//     "Name",
-//     "Position_or_Title",
-//     "Department",
-//     "Tel. # (Office/Mobile/Res)",
-//     "Email",
-//     "CNIC/Passport No.",
-//   ];
 
   console.log(proposalCover);
   console.log(principleInvestigator);
@@ -95,7 +84,10 @@ const AddGrants = () => {
     <div className="addgrants-container">
       <Sidebar />
       <div className="addgrants">
-        <div className="navbar-div">
+        {/* <div className="navbar-div">
+          <NavBar />
+        </div> */}
+        <div className="addgrant_navbar-div">
           <NavBar />
         </div>
         <div className="addgrants-card">
@@ -262,8 +254,8 @@ const AddGrants = () => {
             </div>
 
             <div>
-              <div className="save-btn">
-                <button className="savebut">Save</button>
+              <div className="addgrant_save-btn">
+                <button className="addgrant_savebut">Save</button>
               </div>
             </div>
           </div>

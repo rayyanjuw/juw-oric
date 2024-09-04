@@ -30,7 +30,6 @@
   color: #66615b;
 } */
 
-
 /* div.navbar-div {
   margin: 0 0 1.4rem 0;
   display: flex;
@@ -87,6 +86,7 @@
 
 .View_project_detail h5 {
   margin: 0;
+  margin-top: 5px;
 }
 
 .View_project_detail button {
@@ -136,14 +136,18 @@
 }
 
 .vieworicfundedproject-list-table-format b {
-  font-weight: normal;
-  width: 30%;
+  /* font-weight: normal; */
+  font-weight: 450;
+  /* width: 30%; */
+  /* width: 18%; */
+  width: 25%;
   color: #333;
 }
 
 .vieworicfundedproject-list-table-format span {
   width: 70%;
   color: #555;
+  margin-left: 40px;
 }
 
 .juw_copyright p {
@@ -152,4 +156,211 @@
   font-size: 0.8571em;
   line-height: 1.8;
   color: #66615b;
+}
+
+/* @media (max-width: 700px) {
+  .vieworic_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .vieworic_navbar-div h4 {
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #66615b;
+  }
+
+  .vieworicfundedproject-list-table-format {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .vieworicfundedproject-list-table-format b {
+    font-weight: 450;
+    width: 30%;
+    color: #333;
+  }
+
+  .vieworicfundedproject-list-table-format span {
+    width: 70%;
+    color: #555;
+    margin-left: 40px;
+  }
+} */
+
+/* @media (max-width: 1200px) {
+  .vieworicfundedproject-list-table-format {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .vieworicfundedproject-list-table-format span {
+    flex: 1 1;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+  }
+
+
+  .vieworicfundedproject-list-table-format b {
+    font-weight: 450;
+    align-items: left;
+    width: 100%;
+    color: #333;
+  }
+} */
+
+/* @media (max-width: 1024px) {
+  .vieworic_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .vieworic_navbar-div h4 {
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #66615b;
+  }
+
+  .vieworicfundedproject-list-table-format {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
+  .vieworicfundedproject-list-table-format b {
+    font-weight: 450;
+    width: 100%;
+    color: #333;
+  }
+
+  .vieworicfundedproject-list-table-format span {
+    width: 100%;
+    color: #555;
+    margin-left: 40px;
+  }
+} */
+
+/* my media query */
+
+@media (max-width: 480px) {
+  button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-w92lsb-MuiButtonBase-root-MuiIconButton-root {
+    /* margin-top: 10px !important; */
+    margin-top: 40px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .vieworic_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .vieworic_navbar-div h4 {
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #66615b;
+  }
+
+  .View_project_detail button {
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    height: 20px;
+    color: white;
+    font-size: 0.7em;
+    padding: 0 7px;
+    background-color: #51cbce;
+    border: none;
+    cursor: pointer;
+  }
+
+  .vieworicfundedproject-list-table-format {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .vieworicfundedproject-list-table-format b {
+    flex: 1;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 460;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .vieworicfundedproject-list-table-format span {
+    flex: 1;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-w92lsb-MuiButtonBase-root-MuiIconButton-root {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vieworic_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .vieworic_navbar-div h4 {
+    font-weight: 400;
+    /* font-size: 22px; */
+    font-size: 18px;
+    margin-top: 10px;
+    /* margin-left: 30px; */
+    margin-left: 40px;
+    color: #66615b;
+  }
+
+  .View_project_detail button {
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    height: 25px;
+    color: white;
+    font-size: 0.61em;
+    padding: 6px 7px;
+    background-color: #51cbce;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-w92lsb-MuiButtonBase-root-MuiIconButton-root {
+    margin-top: 10px !important;
+  } */
+
+  .vieworicfundedproject-table-data h5 {
+    margin-top: 5px;
+  }
 }

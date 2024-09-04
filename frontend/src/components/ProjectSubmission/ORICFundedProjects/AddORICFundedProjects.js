@@ -31,10 +31,6 @@ const AddORICFundedProjects = () => {
           <h4>Submission | Intellectual Property</h4>
           <NavBar />
         </div>
-        {/* <div className="navbar-div">
-          <h4>Submission | Intellectual Property</h4>
-          <NavBar />
-        </div> */}
         <div className="add-oricfundedproject-card">
           <h4>ORIC Funded Project | Proposal Cover</h4>
           <p>
@@ -42,20 +38,19 @@ const AddORICFundedProjects = () => {
             Justification for The Requested Budget Items / Estimated Budget for
             Proposed Research Period
           </p>
-          {/* <div className="addintelproperty_multiInputFields"> */}
           <div className="add-oricfundedproject_multiInputFields">
-            <div className="title-input">
+            {/* <div className="addoric_title-input"> */}
+            <div className="addoric_InputGroup">
               <label>Title:</label>
               <input
                 type="text"
                 placeholder="Title"
-                // value={AddFundedProjects["Title"]}
                 value={AddFundedProjects.Title}
                 name="Title"
                 onChange={handleChange}
               />
             </div>
-            <div className="InputGroup">
+            <div className="addoric_InputGroup">
               <label>Name of PI:</label>
               <input
                 type="text"
@@ -65,8 +60,8 @@ const AddORICFundedProjects = () => {
               />
             </div>
 
-            <div className="two-inputs">
-              <div className="InputGroup">
+            <div className="addoric_two-inputs">
+              <div className="addoric_InputGroup">
                 <label>Name of Faculty:</label>
                 <input
                   type="text"
@@ -75,7 +70,7 @@ const AddORICFundedProjects = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="InputGroup">
+              <div className="addoric_InputGroup">
                 <label>Total Budget requested:</label>
                 <input
                   type="number"
@@ -85,8 +80,8 @@ const AddORICFundedProjects = () => {
                 />
               </div>
             </div>
-            <div className="save-btn">
-              <button className="savebut">Save</button>
+            <div className="AOF_save-btn">
+              <button className="AOF_savebut">Save</button>
             </div>
           </div>
         </div>
