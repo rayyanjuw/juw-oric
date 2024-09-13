@@ -1,0 +1,190 @@
+.viewgrants-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.viewgrants {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+
+.viewgrants-card {
+  background-color: white;
+  margin-top: 15px;
+  width: 100%;
+  display: "flex";
+  flex-direction: column;
+  min-height: 300px;
+  padding: 25px;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+
+.viewgrants-card h5 {
+  margin-top: 10px;
+  font-size: 1.57em;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: #252422;
+  margin-bottom: 20p;
+}
+
+.Viewgrants_detail {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.Viewgrants_detail h5 {
+  margin: 0;
+}
+
+.Viewgrants_detail button {
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  height: 30px;
+  color: white;
+  font-size: 0.8571em;
+  padding: 5px 7px;
+  background-color: #51cbce;
+  border: none;
+  cursor: pointer;
+}
+
+.viewgrants-table-data h5 {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Montserrat", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+.viewgrants-table-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0;
+}
+
+.viewgrants-list-table {
+  display: flex;
+  border-top: 1px solid #dee2e6;
+  /* margin-top: 20px; */
+  width: 100%;
+  padding: 12px 0px;
+  flex-direction: column;
+  margin-left-right: 0;
+}
+
+.viewgrants-list-table-format {
+  display: flex;
+  border-top: 1px solid #dee2e6;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.viewgrants-list-table-format.title {
+  font-weight: normal;
+}
+
+.viewgrants-list-table-format b {
+  font-weight: 450;
+  width: 30%;
+  color: #333;
+}
+
+.viewgrants-list-table-format span {
+  width: 70%;
+  color: #555;
+}
+
+.juw_copyright p {
+  margin-top: 80px;
+  text-align: right;
+  font-size: 0.8571em;
+  line-height: 1.8;
+  color: #66615b;
+}
+
+
+@media (max-width: 480px){
+
+  .viewgrants-card h5 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    font-weight: 400;
+    color: #252422;
+    /* margin-bottom: 20px; */
+  }
+
+  .viewgrants-card {
+    background-color: white;
+    margin-top: 55px;
+    width: 100%;
+    display: "flex";
+    flex-direction: column;
+    min-height: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    flex-grow: 1;
+  }
+
+  /* .viewgrants-list-table {
+    display: flex;
+    border-top: 1px solid #dee2e6;
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 0px;
+    flex-direction: column;
+    margin-left-right: 0;
+  } */
+
+  .viewgrants-list-table-format {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+
+  .viewgrants-list-table-format b,
+  .viewgrants-list-table-format span {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .viewgrants-list-table-format b {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .Viewgrants_detail h5 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .viewgrants_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: -40px;
+  }
+
+}

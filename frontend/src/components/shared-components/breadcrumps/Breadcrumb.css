@@ -1,15 +1,17 @@
-nav.breadcrumb {
-    margin: 0;
-}
+/* actual code : perfectly working */
 
-.breadcrumb ul {
+/* nav.breadcrumb {
+    margin: 0;
+} */
+
+/* .breadcrumb ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
     margin: 0;
-}
+} */
 
 .bred-label {
     font-size: 12px;
@@ -28,4 +30,52 @@ nav.breadcrumb {
 
 .none-active:hover {
     text-decoration: underline;
+}
+
+
+/* responsive */
+
+nav.breadcrumb {
+    margin: 0;
+    padding: 0.5rem 0; 
+}
+
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5
+}
+
+
+
+@media (max-width: 768px) {
+    .breadcrumb ul {
+        justify-content: flex-start;
+        gap: 0.3rem;
+        padding-left: 10px;
+    }
+
+    .bred-label {
+        font-size: 10px;
+    }
+
+    .separator {
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .bred-label {
+        font-size: 11px;
+    }
+
 }

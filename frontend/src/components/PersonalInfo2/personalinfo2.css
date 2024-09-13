@@ -1,0 +1,257 @@
+.add_personal_info_container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; 
+}
+
+.sidebar {
+    width: 20%;
+    background: #0037a5;
+    position: sticky;
+    color: #FFFFFF;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    font-size: 10px;
+    z-index: 1000; 
+    transition: all 0.3s ease; 
+}
+
+.add_personal_info {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #F4F3EF;
+    padding: 20px;
+    transition: margin-left 0.3s ease; 
+}
+
+.PI2_bred-crumb {
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+    background-color: #e9ecef;
+}
+/* .bred-crumb {
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+} */
+
+.add-personalInfo_card {
+    width: 100%;
+    height: 900px;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+
+.add-personalInfo_heading {
+  padding: 1rem 1rem 0.7rem 1rem;
+  font-size: 22px;
+}
+
+.bred-crumb {
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+}
+
+
+.multiInputFields {
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+     line-height: 30px;
+     border-radius: 5px;
+     color: #66615b;
+     box-shadow: none;
+     font-size: 14px;
+     box-sizing: border-box;
+     padding: 10px 15px;
+ }
+ 
+ .multiInputFields label {
+     color: #9A9A9A;
+     font-size: 0.8571em;
+ }
+
+
+.multiInputFields input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #DDDDDD;
+  color: #66615B;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+.EPI_save-btn-bg {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.EPI_savebut {
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 5vh;
+    margin-left: 15px;
+    margin: center;
+    color: white;
+    background-color: #51cbce;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    border-width: 1px;
+}
+
+
+
+/* .save-button {
+  display: block;
+  margin: 20px auto; 
+  padding: 10px 50px;
+  background-color: #51cbce;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+} */
+
+
+.savebutton {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+/* .save-btn-bg {
+    background-color: #f2f2f2;
+    padding: 2rem 1.7rem;
+    display: flex;
+    align-items: center;
+} */
+
+
+div.navbar-div {
+    margin: 0 0 1.4rem 0;
+}
+
+
+
+/* responsiveness */
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .add_personal_info {
+        padding: 15px;
+    }
+
+    .add-personalInfo_card {
+        height: auto; /* Allow the card to adjust its height based on content */
+    }
+
+    .multiInputFields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .EPI_savebut {
+        font-size: 14px; 
+        width: 10vw; 
+        height: 5vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .add_personal_info {
+        padding: 10px;
+    }
+
+    .add-personalInfo_card {
+        height: auto;
+    }
+
+    .multiInputFields {
+        grid-template-columns: 1fr; 
+    }
+
+    .EPI_savebut {
+        font-size: 14px; 
+        width: 10vw; 
+        height: 3vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for small screens */
+        position: static; /* Remove sticky positioning */
+    }
+
+    .add_personal_info_container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .add_personal_info {
+        padding: 5px;
+    }
+
+    .add-personalInfo_card {
+        margin: 5px;
+    }
+
+    .EPI_savebut {
+        /* width: 100%;  */
+        width: 98%; 
+        height: 40px;
+        width: 11vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .multiInputFields {
+        padding: 5px;
+    }
+
+    .multiInputFields input {
+        font-size: 12px; /* Adjust font size for small screens */
+    }
+
+    .EPI_savebut {
+        font-size: 14px; /* Adjust font size */
+        height: 40px;
+        width: 15vw;
+    }
+}

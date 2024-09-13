@@ -1,0 +1,92 @@
+.ResearchGrants-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.researchGrants {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+.researchGrants-card {
+  background-color: white;
+  margin-top: 15px;
+  width: 100%;
+  display: "flex";
+  flex-direction: column;
+  min-height: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+
+.researchGrants-card h4 {
+  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.RG_bred-crumb {
+  margin: 0px 0rem !important;
+  background-color: #e9ecef;
+}
+/* .bred-crumb {
+  margin: 0px 0rem !important;
+} */
+
+.h4-heading {
+  margin-top: 40px;
+}
+
+.researchGrants-table1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-heading {
+  text-align: left;
+  padding: 10px;
+  background-color: white;
+  font-weight: bold;
+  /* border-bottom: 1px solid #ddd; */
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.key-column {
+  background-color: #e2ecff;
+  padding: 10px;
+  font-weight: normal;
+  width: 30%;
+}
+
+.value-column {
+  padding: 10px;
+  width: 70%;
+}
+
+table td {
+  padding: 10px;
+}

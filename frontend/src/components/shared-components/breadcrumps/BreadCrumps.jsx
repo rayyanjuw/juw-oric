@@ -1,7 +1,7 @@
 // Breadcrumb.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Breadcrumb.css'; // Assuming you have a CSS file for styling
+import './Breadcrumb.css';
 import { Link } from 'react-router-dom';
 
 const Breadcrumb = ({ items, activePath }) => {
@@ -34,3 +34,5 @@ Breadcrumb.propTypes = {
 };
 
 export default Breadcrumb;
+
+

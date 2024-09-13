@@ -1,0 +1,249 @@
+.edit_honorandaward_container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; 
+}
+
+.sidebar {
+    width: 20%;
+    background: #0037a5;
+    position: sticky;
+    color: #FFFFFF;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    font-size: 10px;
+    z-index: 1000; 
+    transition: all 0.3s ease; 
+}
+
+.edit_honorandaward {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #F4F3EF;
+    padding: 20px;
+    transition: margin-left 0.3s ease; 
+}
+
+
+.edit_honorandaward_card {
+    width: 95%;
+    height: 100vh;
+    /* height: 680px; */
+    margin: auto;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+/* .edit_honorandaward_card {
+    width: calc(100% - 40px); 
+    margin: 20px auto; 
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    max-height: calc(100vh - 60px); 
+    overflow-y: auto; 
+} */
+
+
+
+
+.edit_honorandaward_heading {
+    padding: 1rem 1rem 0.7rem 1rem;
+    font-size: 22px;
+}
+
+/* .edit_honorandaward_subheading {
+    padding: 1rem 1rem 0.7rem 1rem;
+    font-size: 16px;
+} */
+
+.edit_honorandaward_subheading {
+    padding: 1rem 1rem 0.3rem 1rem; 
+    font-size: 16px;
+}
+
+/* .navba-div {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+} */
+
+.EHA_bred-crumb {
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+    background-color: #e9ecef;
+}
+/* .bred-crumb {
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+} */
+
+.EDIT_Honor_multiInputFields {
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+     line-height: 30px;
+     border-radius: 5px;
+     color: #66615b;
+     box-shadow: none;
+     font-size: 14px;
+     box-sizing: border-box;
+     padding: 10px 15px;
+ }
+ 
+ .EDIT_Honor_multiInputFields label {
+     color: #9A9A9A;
+     font-size: 0.8571em;
+ }
+
+
+.EDIT_Honor_multiInputFields input {
+    width: 100%;
+    padding: 6px; 
+    border: 1px solid #DDDDDD;
+    color: #66615B;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.EHA_save-btn-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EHA_savebut {
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 5vh;
+    margin-left: 15px;
+    margin: center;
+    color: white;
+    background-color: #51cbce;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    border-width: 1px;
+}
+
+
+.juw_copyright p{
+    margin-top: 80px;    
+    text-align: right;
+    font-size: 0.8571em;
+    line-height: 1.8;
+    color: #66615B;
+}
+
+
+
+
+/* responsiveness */
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+        font-size: 0.875rem;
+    }
+    .edit_honorandaward_card {
+        height: auto;
+    }
+
+    .EHA_savebut {
+        width: 8vw;
+        height: 3vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 30%;
+    }
+    .edit_honorandaward {
+        padding: 15px;
+    }
+    .edit_honorandaward_card {
+        width: calc(100% - 30px); /* Adjust width for medium screens */
+    }
+
+    .EHA_savebut {
+        width: 8vw;
+        height: 3vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .edit_honorandaward_container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        font-size: 0.75rem; /* Smaller font size for smaller screens */
+    }
+    .edit_honorandaward {
+        padding: 10px;
+    }
+    .edit_honorandaward_card {
+        width: 100%;
+        margin: 10px 0; /* Adjust margin for small screens */
+        height: auto; /* Allow card to adjust height */
+    }
+    .edit_honorandaward_heading {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    .edit_honorandaward_subheading {
+        font-size: 1.2rem;
+    }
+
+    .EHA_savebut {
+        width: 10vw;
+        height: 4vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .edit_honorandaward_heading {
+        font-size: 1.25rem;
+    }
+    .edit_honorandaward_subheading {
+        font-size: 1rem;
+    }
+    .EDIT_Honor_multiInputFields {
+        grid-template-columns: 1fr; 
+        font-size: 12px;
+    }
+    .EDIT_Honor_multiInputFields label {
+        font-size: 0.75em;
+    }
+    .EDIT_Honor_multiInputFields input {
+        font-size: 12px;
+        padding: 4px;
+    }
+    .juw_copyright p {
+        font-size: 0.75em;
+    }
+
+    .EHA_savebut {
+        width: 13vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4vh;
+    }
+}
+

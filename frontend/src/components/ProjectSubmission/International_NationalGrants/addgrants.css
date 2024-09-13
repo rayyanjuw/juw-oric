@@ -1,0 +1,264 @@
+.addgrants-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #0037a5;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  font-size: 10px;
+}
+
+.addgrants {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f3ef !important;
+  padding: 20px;
+}
+
+.addgrants-card {
+  background-color: white;
+  margin-top: 15px;
+  width: 100%;
+  display: "flex";
+  flex-direction: column;
+  min-height: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+
+.addgrants-card h5 {
+  font-size: 1.57em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #252422;
+}
+
+.addgrants-card p {
+  background-color: #e9ecef;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #252422;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.addgrants_multiInputFields h4 {
+  margin-top: 30px;
+}
+.addgrants_multiInputFields input {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 6px;
+  border: 1px solid #dddddd;
+  color: #66615b;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.addgrants_multiInputFields label {
+  /* width: calc(100% - 20px);  */
+  font-size: 0.8571em;
+  margin-bottom: 5px;
+  color: #9a9a9a;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.title-input {
+  margin-bottom: 15px;
+}
+
+.two-inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.two-inputs .InputGroup {
+  flex: 1;
+}
+
+.InputGroup {
+  margin-bottom: 15px;
+}
+
+.InputGroup label {
+  margin-bottom: 5px;
+}
+
+.multiCheckBoxes h6 {
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.theme_research_checkbox {
+  display: flex;
+  gap: 20px; 
+}
+
+.theme_research_checkbox div {
+  display: flex;
+  align-items: center; 
+}
+
+.theme_research_checkbox label {
+  margin: 0;
+  display: flex;
+  align-items: center; 
+}
+
+.theme_research_checkbox input[type="checkbox"] {
+  margin-right: 8px; 
+}
+
+.discipline_research_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    /* gap: 10px;  */
+  }
+  
+  .discipline_research_checkbox h6 {
+    grid-column: 1 / -1; 
+    margin-bottom: 10px; 
+  }
+  
+  .discipline_research_checkbox div {
+    display: flex;
+    align-items: center; 
+    font-size: 0.8571em; 
+    color: #9A9A9A; 
+  }
+  
+  .discipline_research_checkbox input[type="checkbox"] {
+    margin-right: 4px; 
+  }
+  
+
+
+  .addgrant_save-btn {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+  }
+  
+  .addgrant_savebut {
+    font-weight: 600;
+    font-size: 12px;
+    width: 10vw;
+    height: 5vh;
+    margin-left: 1px;
+    color: white;
+    background-color: #51cbce;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    border-width: 1px;
+  }
+
+
+
+  /* responsiveness */
+  /* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  
+  .addgrants-container {
+    flex-direction: column;
+  }
+
+  .addgrants {
+    padding: 10px;
+  }
+
+  .addgrants-card {
+    padding: 15px;
+  }
+  
+  .theme_research_checkbox, 
+  .discipline_research_checkbox {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .multiCheckBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .addgrant_navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: -40px;
+  }
+
+  .addgrants {
+    padding: 5px;
+  }
+
+  .addgrants-card {
+    padding: 10px;
+    margin-top: 70px;
+  }
+  
+  .theme_research_checkbox,
+  .discipline_research_checkbox {
+    gap: 5px;
+  }
+
+
+  .discipline_research_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    /* gap: 10px;  */
+  }
+  
+  .discipline_research_checkbox h6 {
+    grid-column: 1 / -1; 
+    margin-bottom: 10px; 
+  }
+
+  .addgrant_savebut {
+    font-size: 10px;
+    width: 20%;
+    height: 5vh;
+  }
+  
+  .addgrant_save-btn {
+    height: auto;
+    justify-content: center;
+  }
+
+  button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-w92lsb-MuiButtonBase-root-MuiIconButton-root {
+    margin-top: 10px !important;
+  }
+}
+
